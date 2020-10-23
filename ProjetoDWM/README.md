@@ -4,7 +4,7 @@
 
 Projeto em Laravel - Grupo 4
 
-André Moleirinho
-Diogo Oliveira
+André Moleirinho \n
+Diogo Oliveira \n
 João Bettencourt
 
