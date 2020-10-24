@@ -28,7 +28,7 @@
         </div>
     </header>
 
-    @yield('cadeira')
+    @yield('content')
 
     <footer id="footer">
         <div class="inner">
