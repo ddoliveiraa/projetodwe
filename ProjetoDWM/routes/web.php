@@ -33,6 +33,11 @@ Route::get('/registo', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/listaCadeiras', function () {
+    return view('listaCadeiras');
+});
+
 Route::resource('cadeira', VideoaulaController::class);
 
 Auth::routes();
