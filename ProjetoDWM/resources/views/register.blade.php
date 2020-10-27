@@ -10,8 +10,15 @@
     <section id="two" class="wrapper">
 
         <div class="inner">
-            <h3>Login</h3>
+            <h3>Registo</h3>
             <form method="post" action="#">
+
+                <div class="row uniform">
+                    <div class="6u 12u$(xsmall)">
+                        <input type="text" name="name" id="name" value="" placeholder="Nome"/>
+                    </div>
+                </div>
+
                 <div class="row uniform" >
                     <div class="6u 12u$(xsmall)">
                         <input type="text" name="email" id="email" value="" placeholder="Endereço email"/>
