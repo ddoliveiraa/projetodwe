@@ -34,3 +34,7 @@ Route::get('/login', function () {
     return view('login');
 });
 Route::resource('cadeira', VideoaulaController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
