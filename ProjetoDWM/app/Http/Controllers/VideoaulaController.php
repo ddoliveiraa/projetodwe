@@ -11,9 +11,9 @@ class VideoaulaController extends Controller
 {
     public function index() {
         
-        $users = comentarios::all();
+        $videos = videoaula::all();
 
-        return view('participants', ['users'=>$users]);
+        return view('biblioteca', ['videos'=>$videos]);
      }
 
      public function create() {
