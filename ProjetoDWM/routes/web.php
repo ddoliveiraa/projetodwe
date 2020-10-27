@@ -26,8 +26,11 @@ Route::get('/biblioteca', function () {
     return view('biblioteca');
 });
 
+Route::get('/registo', function () {
+    return view('register');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
-
 Route::resource('cadeira', VideoaulaController::class);

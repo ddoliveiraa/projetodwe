@@ -40,7 +40,6 @@ class VideoaulaController extends Controller
 
      public function show($id) {
         $video = videoaula::find($id);
-
         $comentarios = comentarios::where('id_video', $id)->get();
 
         return view('cadeira', ['video'=>$video , 'coms'=>$comentarios]);
