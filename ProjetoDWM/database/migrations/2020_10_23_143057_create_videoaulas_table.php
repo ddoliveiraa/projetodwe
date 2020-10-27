@@ -14,7 +14,7 @@ class CreateVideoaulasTable extends Migration
     public function up()
     {
         Schema::create('videoaulas', function (Blueprint $table) {
-            $table->bigInteger('id');
+            $table->serial('id');
             //$table->bigInteger('id_disciplina');
             $table->String('nome');
             $table->String('descricao');
