@@ -21,3 +21,7 @@ Route::get('/cadeira', function () {
     return view('cadeira');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
