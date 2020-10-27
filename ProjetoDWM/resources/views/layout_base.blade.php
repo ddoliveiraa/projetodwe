@@ -7,10 +7,11 @@
 <html>
 
 <head>
-    <title>Theory by TEMPLATED</title>
+    <title>Vídeo aulas</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/changes.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 <a href="generic.html">Generic</a>
                 <a href="elements.html">Elements</a>
             </nav>
-            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+           <!-- <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a> -->
         </div>
     </header>
 
