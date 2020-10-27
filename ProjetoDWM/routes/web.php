@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VideoaulaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/cadeira', function () {
-    return view('cadeira');
+    return view('cadeiraa');
 });
 
 Route::get('/biblioteca', function () {
@@ -28,3 +29,5 @@ Route::get('/biblioteca', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::resource('cadeira', VideoaulaController::class);

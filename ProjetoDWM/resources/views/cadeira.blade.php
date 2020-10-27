@@ -11,10 +11,10 @@
     <section id="two" class="wrapper style1 special">
         <div class="inner">
             <header>
-                <h2>Nome da Aula</h2>
+                <h2>{{$video->nome}}</h2>
             </header>
             <div class="wrapper">
-                <video src="" width="960px" height="540px" controls>
+                <video src="{{$video->url}}" width="960px" height="540px" controls>
 
                 </video>
             </div>
@@ -26,14 +26,17 @@
 
             <h2 class="wrapper">Faça um comentário</h2>
 
-            <form method="post" action="#">
+            <form method="post" action="/c">
+                @csrf
                 <div class="row uniform">
                     <div class="6u 12u$(xsmall)">
                         <input type="text" name="name" id="name" value="" placeholder="Nome"/>
+                        <p>{{ $errors->first('name')}}</p>
                     </div>
                     <!-- Break -->
                     <div class="12u$">
                         <textarea name="message" id="message" placeholder="Escreva um comentário..." rows="6"></textarea>
+                        <p>{{ $errors->first('message')}}</p>
                     </div>
                     <!-- Break -->
                     <div class="12u$">
@@ -49,24 +52,14 @@
                 <h2>Comentários</h2>
             </header>
             <div>
+                @foreach($coms as $c)
                 <article>
                     <header>
-                        <h3>Nome pessoa</h3>
+                        <h3>{{$c->nome}}</h3>
                     </header>
-                    <p>Comentários</p>
+                    <p>{{$c->comentario}}</p>
                 </article>
-                <article>
-                    <header>
-                        <h3>Nome pessoa</h3>
-                    </header>
-                    <p>Comentários</p>
-                </article>
-                <article>
-                    <header>
-                        <h3>Nome pessoa</h3>
-                    </header>
-                    <p>Comentários</p>
-                </article>
+                @endforeach
             </div>
 
 

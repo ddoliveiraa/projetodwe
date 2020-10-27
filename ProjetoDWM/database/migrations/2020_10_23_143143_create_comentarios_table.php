@@ -14,7 +14,7 @@ class CreateComentariosTable extends Migration
     public function up()
     {
         Schema::create('comentarios', function (Blueprint $table) {
-            $table->serial('id');
+            $table->bigIncrements('id');
             $table->bigInteger('id_video');
             $table->String('nome');
             $table->String('comentario');
