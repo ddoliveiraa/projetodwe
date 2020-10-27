@@ -20,7 +20,7 @@
 
                 <div class="row uniform">
                     <div class="6u 12u$(xsmall)">
-                        <input type="text" name="pass" id="pass" value="" placeholder="Password"/>
+                        <input type="text" name="password" id="password" value="" placeholder="Password"/>
                     </div>
                 </div>
             </form>
