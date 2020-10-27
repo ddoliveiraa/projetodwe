@@ -28,10 +28,10 @@
             <div class="row">
                 <div class="6u 12u$(xsmall)">
                    <a href="#" class="button special">Login</a>
+                    <a href="#" class="button special">Registar</a>
                 </div>
             </div>
         </div>
-
     </section>
 
 @endsection
