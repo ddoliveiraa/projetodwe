@@ -4,13 +4,14 @@
 
     <!-- Banner -->
     <section id="banner">
+        <h1>Nome cadeira</h1>
     </section>
 
     <!-- Two -->
     <section id="two" class="wrapper style1 special">
         <div class="inner">
             <header>
-                <h2>Nome da Cadeira</h2>
+                <h2>Nome da Aula</h2>
             </header>
             <div class="wrapper">
                 <video src="" width="960px" height="540px" controls>
