@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VideoaulaController;
+use App\Http\Controllers\ComentariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,11 @@ Route::get('/registo', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+
 Route::resource('cadeira', VideoaulaController::class);
+Route::resource('comentario', ComentariosController::class);
+
 
 Auth::routes();
 

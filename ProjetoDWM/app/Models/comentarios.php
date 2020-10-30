@@ -17,5 +17,6 @@ class comentarios extends Model
     protected $fillable = [
         'nome',
         'comentário',
+        "id_video",
     ];
 }
