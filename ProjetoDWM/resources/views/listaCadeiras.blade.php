@@ -13,12 +13,15 @@
             </header>
 
             <div class="flex flex-4">
-                <div class="box person custom-button">
-                    <h3>Cadeira</h3>
-                </div>
-                <div class="box person custom-button">
-                    <h3>Cadeira</h3>
-                </div>
+
+                @foreach ($cadeiras as $cadeira)
+
+                    <div class="box person custom-button">
+                        <h3>{{ $cadeira->nome }}</h3>
+                    </div>
+
+                @endforeach
+
             </div>
         </div>
     </section>

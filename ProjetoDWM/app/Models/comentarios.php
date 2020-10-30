@@ -9,6 +9,8 @@ class comentarios extends Model
 {
     use HasFactory;
 
+    protected $table = 'comentarios';
+
     /**
      * The attributes that are mass assignable.
      *
