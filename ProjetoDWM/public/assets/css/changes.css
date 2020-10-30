@@ -1,3 +1,17 @@
 article {
     margin-bottom: 20px;
 }
+
+.custom-button {
+    -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+.custom-button:hover {
+    cursor: pointer;
+    background-color: #6795dd;
+}

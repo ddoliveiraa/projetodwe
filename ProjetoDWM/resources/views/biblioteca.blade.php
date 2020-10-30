@@ -4,7 +4,6 @@
 
     <section id="banner">
         <h1>Nome cadeira</h1> {{-- Cadeira --}}
-        
     </section>
 
     <!-- One -->
