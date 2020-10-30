@@ -14,7 +14,7 @@
 
             <div class="flex flex-4">
 
-                @foreach ($cadeiras as $cadeira)
+                @foreach ($c as $cadeira)
 
                     <div class="box person custom-button">
                         <h3>{{ $cadeira->nome }}</h3>

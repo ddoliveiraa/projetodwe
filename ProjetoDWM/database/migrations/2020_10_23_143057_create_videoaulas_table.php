@@ -19,6 +19,7 @@ class CreateVideoaulasTable extends Migration
             $table->String('nome');
             $table->String('descricao');
             $table->String('url');
+            $table->foreignId('id_cadeira');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });

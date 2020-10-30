@@ -11,6 +11,6 @@ class CadeirasController extends Controller
 
         $cadeiras = Cadeiras::all();
 
-        return view('listaCadeiras', ['cadeiras'=>$cadeiras]);
+        return view('listaCadeiras', ['c'=>$cadeiras]);
     }
 }

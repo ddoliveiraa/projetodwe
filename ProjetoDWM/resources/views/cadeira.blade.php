@@ -30,7 +30,7 @@
                 @csrf
                 <div class="row uniform">
                     <div class="6u 12u$(xsmall)">
-                        <input type="text" name="name" id="name" value="" placeholder="Nome"/>
+                        <input type="text" name="name" id="name" value="" placeholder="Nome" autocomplete="off"/>
                         <p style="color:red">{{ $errors->first('name')}}</p>
                     </div>
                     <!-- Break -->

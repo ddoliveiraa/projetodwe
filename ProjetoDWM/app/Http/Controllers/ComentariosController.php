@@ -29,7 +29,8 @@ class ComentariosController extends Controller
         $user->id_video = $request->vid_id;
         $user->save();
 
-        return redirect('/cadeira/'.$request->vid_id);
+        //return redirect('/video_aula/'.$request->vid_id);
+        return back();
 
      }
 
