@@ -21,9 +21,8 @@
         <div class="inner">
             <a href="index.html" class="logo">Theory</a>
             <nav id="nav">
-                <a href="index.html">Página principal</a>
-                <a href="generic.html">Generic</a>
-                <a href="elements.html">Elements</a>
+                <a href="/listaCadeiras">Cadeiras</a>
+                <a href="">Logout</a>
             </nav>
            <!-- <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a> -->
         </div>
@@ -31,7 +30,7 @@
 
     @yield('content')
 
-    <footer id="footer">
+    <footer id="footer" class="background-color-grey">
         <div class="inner">
             <div class="flex">
                 <div class="copyright">

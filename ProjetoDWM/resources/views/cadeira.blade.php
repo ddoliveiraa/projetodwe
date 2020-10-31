@@ -54,7 +54,7 @@
             </header>
             <div>
                 @foreach($coms as $c)
-                <article style="background: rgb(144, 144, 144, 0.075)">
+                <article class="comment-box">
                     <header>
                         <h3>{{$c->nome}}</h3>
                     </header>
