@@ -4,7 +4,7 @@
 
     <!-- Banner -->
     <section id="banner">
-        <h1>Nome cadeira</h1>
+    <h1>{{$c->nome}}</h1>
     </section>
 
     <!-- Two -->

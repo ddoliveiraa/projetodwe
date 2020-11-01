@@ -11,7 +11,4 @@ class Cadeiras extends Model
 
     protected $table = 'cadeiras';
 
-    protected $fillable = [
-        'nome',
-    ];
 }

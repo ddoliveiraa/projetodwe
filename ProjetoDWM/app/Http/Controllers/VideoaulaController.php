@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\videoaula;
 use App\Models\comentarios;
-
+use App\Models\Cadeiras;
 
 class VideoaulaController extends Controller
 {
@@ -41,8 +41,9 @@ class VideoaulaController extends Controller
      public function show($id) {
         $video = videoaula::find($id);
         $comentarios = comentarios::where('id_video', $id)->get();
+        $cadeira = Cadeiras::where('id', $video->id_cadeira)->get();
 
-        return view('cadeira', ['video'=>$video , 'coms'=>$comentarios]);
+        return view('cadeira', ['video'=>$video , 'coms'=>$comentarios, 'c'=>$cadeira]);
      }
 
      public function edit($id) {
