@@ -28,13 +28,13 @@ Route::get('/biblioteca', function () {
     return view('biblioteca');
 });
 
-Route::get('/registo', function () {
-    return view('register');
-});
+//Route::get('/registo', function () {
+//    return view('register');
+//});
 
-Route::get('/login', function () {
-    return view('login');
-});
+//Route::get('/login', function () {
+//    return view('login');
+//});
 
 /*Route::get('/listaCadeiras', function () {
     return view('listaCadeiras');
@@ -43,6 +43,7 @@ Route::get('/login', function () {
 Route::resource('/video_aula', VideoaulaController::class);
 Route::resource('/comentario', ComentariosController::class);
 Route::resource('/listaCadeiras', CadeirasController::class);
+
 
 Auth::routes();
 
