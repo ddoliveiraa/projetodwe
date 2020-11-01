@@ -16,10 +16,10 @@
                     <article>
                         <header>
                         <h3>{{$video->nome}}</h3> {{-- Title --}}
-                            
+
                         </header>
                         <p>{{$video->descricao}}</p> {{-- Description --}}
-                        
+
                         <footer>
                             <a href="/cadeira" class="button special">Ver</a>
                         </footer>
