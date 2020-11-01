@@ -68,8 +68,14 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
+
+                                <button onclick="location.href='{{ url('register')}}'" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
                             </div>
                         </div>
+
+
                     </form>
                 </div>
             </div>
