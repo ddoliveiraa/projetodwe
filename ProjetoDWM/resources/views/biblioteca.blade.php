@@ -11,7 +11,7 @@
         <div class="inner">
             <div class="flex flex-3">
 
-                @foreach ($videos as $video)
+                @foreach ($v as $video)
 
                     <article>
                         <header>
@@ -21,7 +21,7 @@
                         <p>{{$video->descricao}}</p> {{-- Description --}}
 
                         <footer>
-                            <a href="/cadeira" class="button special">Ver</a>
+                        <a href="/video_aula/{{$video->id}}" class="button special">Ver</a>
                         </footer>
                     </article>
 

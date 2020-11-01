@@ -17,7 +17,7 @@
                 @foreach ($c as $cadeira)
 
                     <div class="box person custom-button">
-                        <h3>{{ $cadeira->nome }}</h3>
+                    <a href="/listaCadeiras/{{$cadeira->id}}"><h3>{{ $cadeira->nome }}</h3></a>
                     </div>
 
                 @endforeach

@@ -7,15 +7,7 @@ use App\Models\comentarios;
 
 class ComentariosController extends Controller
 {
-    public function index() {
-        
-        $users = comentarios::all();
-
-        return view('participants', ['users'=>$users]);
-     }
-
      public function store(Request $request) {
-
 
         $request->validate([
             'name' => 'required',
@@ -32,13 +24,5 @@ class ComentariosController extends Controller
         //return redirect('/video_aula/'.$request->vid_id);
         return back();
 
-     }
-
-     public function show($id) {
-        echo 'show';
-     }
-
-     public function destroy($id) {
-        echo 'destroy';
      }
 }
