@@ -18,7 +18,8 @@ class CadeirasController extends Controller
     public function show($id){
 
         $videos = videoaula::where('id_cadeira', $id)->get();
+        $cadeira = Cadeiras::where('id', $id)->get();
 
-        return view('biblioteca', ['v'=>$videos]);
+        return view('biblioteca', ['v'=>$videos, 'c'=>$cadeira]);
     }
 }

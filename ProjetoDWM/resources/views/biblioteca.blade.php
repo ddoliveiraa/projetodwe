@@ -3,7 +3,7 @@
 @section('content')
 
     <section id="banner">
-        <h1>Nome cadeira</h1> {{-- Cadeira --}}
+        <h1>{{$c[0]->nome}}</h1> {{-- Cadeira --}}
     </section>
 
     <!-- One -->
@@ -13,7 +13,7 @@
 
                 @foreach ($v as $video)
 
-                    <article>
+                    <article class="comment-box">
                         <header>
                         <h3>{{$video->nome}}</h3> {{-- Title --}}
 

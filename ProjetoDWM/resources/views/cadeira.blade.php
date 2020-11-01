@@ -20,6 +20,10 @@
             </div>
         </div>
     </section>
+    {{-- @if (1 == 0){
+        <p>Estou aqui</p>   Isto está aqui apenas para saber como fazer o if nas páginas
+    }
+    @endif --}}
 
     <section id="three" class="wrapper special">
         <div class="inner">
