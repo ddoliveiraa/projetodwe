@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVideoaulasTable extends Migration
+class CreateUserCadeirasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateVideoaulasTable extends Migration
      */
     public function up()
     {
-        Schema::create('videoaulas', function (Blueprint $table) {
+        Schema::create('user__cadeiras', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->bigInteger('id_disciplina');
-            $table->String('nome');
-            $table->String('descricao');
-            $table->String('url');
             $table->foreignId('id_cadeira');
+            $table->foreignId('id_user');
+            $table->boolean('isAdmin');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });
@@ -32,6 +30,6 @@ class CreateVideoaulasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('videoaulas');
+        Schema::dropIfExists('user__cadeiras');
     }
 }

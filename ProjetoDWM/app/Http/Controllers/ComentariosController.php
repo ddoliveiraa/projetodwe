@@ -18,17 +18,19 @@ class ComentariosController extends Controller
 
 
         $request->validate([
-            'nome' => 'required',
-            'comentario' => 'required'
+            'name' => 'required',
+            'message' => 'required'
         ]);
         
-        $user = new Participants();
+        $user = new comentarios();
 
         $user->nome = $request->name;
-        $user->nick = $request->nick;
+        $user->comentario = $request->message;
+        $user->id_video = $request->vid_id;
         $user->save();
 
-        return redirect('/');
+        //return redirect('/video_aula/'.$request->vid_id);
+        return back();
 
      }
 

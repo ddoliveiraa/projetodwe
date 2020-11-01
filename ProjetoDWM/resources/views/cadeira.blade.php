@@ -26,22 +26,23 @@
 
             <h2 class="wrapper">Faça um comentário</h2>
 
-            <form method="post" action="/c">
+            <form id="form" method="post" action="/comentario">
                 @csrf
                 <div class="row uniform">
                     <div class="6u 12u$(xsmall)">
-                        <input type="text" name="name" id="name" value="" placeholder="Nome"/>
-                        <p>{{ $errors->first('name')}}</p>
+                        <input type="text" name="name" id="name" value="" placeholder="Nome" autocomplete="off"/>
+                        <p style="color:red">{{ $errors->first('name')}}</p>
                     </div>
                     <!-- Break -->
                     <div class="12u$">
                         <textarea name="message" id="message" placeholder="Escreva um comentário..." rows="6"></textarea>
-                        <p>{{ $errors->first('message')}}</p>
+                        <p style="color:red">{{ $errors->first('message')}}</p>
+                    <input type="text" name="vid_id" id="vid_id" value="{{$video->id}}" style="display:none"/>
                     </div>
                     <!-- Break -->
                     <div class="12u$">
                         <ul class="actions">
-                            <li><input type="submit" value="Publicar" /></li>
+                            <li><input type="submit" value="Comentar" /></li>
                             <li><input type="reset" value="Apagar" class="alt" /></li>
                         </ul>
                     </div>
@@ -53,7 +54,7 @@
             </header>
             <div>
                 @foreach($coms as $c)
-                <article>
+                <article class="comment-box">
                     <header>
                         <h3>{{$c->nome}}</h3>
                     </header>

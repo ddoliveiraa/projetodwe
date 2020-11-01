@@ -9,6 +9,8 @@ class comentarios extends Model
 {
     use HasFactory;
 
+    protected $table = 'comentarios';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -17,5 +19,6 @@ class comentarios extends Model
     protected $fillable = [
         'nome',
         'comentário',
+        "id_video",
     ];
 }
