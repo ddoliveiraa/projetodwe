@@ -9,8 +9,14 @@ use App\Models\Cadeiras;
 
 class VideoaulaController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index() {
-        
+
         $videos = videoaula::all();
 
         return view('biblioteca', ['videos'=>$videos]);
@@ -27,7 +33,7 @@ class VideoaulaController extends Controller
             'nome' => 'required',
             'comentario' => 'required'
         ]);
-        
+
         $user = new Participants();
 
         $user->nome = $request->name;
@@ -54,8 +60,8 @@ class VideoaulaController extends Controller
      }
 
      public function update(Request $request, $id_video) {
-        
-        $user = comentarios::all()->where("id_video" , $id_video); //SELECT * From tabel where 
+
+        $user = comentarios::all()->where("id_video" , $id_video); //SELECT * From tabel where
 
         $user->nome = $request->name;
         $user->nick = $request->nick;

@@ -8,6 +8,12 @@ use App\Models\videoaula;
 
 class CadeirasController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index() {
 
         $cadeiras = Cadeiras::all();
