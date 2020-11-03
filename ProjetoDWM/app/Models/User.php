@@ -43,7 +43,7 @@ class User extends Authenticatable
 
     public function disciplinas(){
 
-        return $this->morphedByMany('App\Models\Cadeiras', 'user__cadeira');
+        return $this->belongsToMany('App\Models\Cadeiras', 'user__cadeiras');
 
     }
 }

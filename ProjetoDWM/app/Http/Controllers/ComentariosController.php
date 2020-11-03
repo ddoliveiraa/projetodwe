@@ -4,19 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\comentarios;
+use App\Http\Controllers\Auth;
 
 class ComentariosController extends Controller
 {
      public function store(Request $request) {
 
         $request->validate([
-            'name' => 'required',
             'message' => 'required'
         ]);
         
         $user = new comentarios();
 
-        $user->nome = $request->name;
+        $user->nome = auth()->name();
         $user->comentario = $request->message;
         $user->id_video = $request->vid_id;
         $user->save();

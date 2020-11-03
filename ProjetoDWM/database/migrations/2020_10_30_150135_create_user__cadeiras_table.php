@@ -14,9 +14,9 @@ class CreateUserCadeirasTable extends Migration
     public function up()
     {
         Schema::create('user__cadeiras', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->foreignId('id_cadeira')->references('id')->on('cadeiras')->onDelete('cascade');
-            $table->foreignId('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->bigIncrements('user__cadeiras_id');
+            $table->foreignId('user__cadeiras_type')->references('id')->on('cadeiras')->onDelete('cascade');
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->boolean('isAdmin');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');

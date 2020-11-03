@@ -33,10 +33,6 @@
             <form id="form" method="post" action="/comentario">
                 @csrf
                 <div class="row uniform">
-                    <div class="6u 12u$(xsmall)">
-                        <input type="text" name="name" id="name" value="" placeholder="Nome" autocomplete="off"/>
-                        <p style="color:red">{{ $errors->first('name')}}</p>
-                    </div>
                     <!-- Break -->
                     <div class="12u$">
                         <textarea name="message" id="message" placeholder="Escreva um comentário..." rows="6"></textarea>
