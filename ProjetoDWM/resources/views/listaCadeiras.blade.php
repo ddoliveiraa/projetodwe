@@ -16,8 +16,8 @@
 
                 @foreach ($c as $cadeira)
 
-                    <div class="box person custom-button">
-                    <a href="/listaCadeiras/{{$cadeira->id}}"><h3>{{ $cadeira->nome }}</h3></a>
+                    <div onclick="window.location='/listaCadeiras/{{$cadeira->id}}';" class="box person custom-button">
+                    <a><h3>{{ $cadeira->nome }}</h3></a>
                     </div>
 
                 @endforeach

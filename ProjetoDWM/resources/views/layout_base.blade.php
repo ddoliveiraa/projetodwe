@@ -37,7 +37,7 @@
     <!-- Header -->
     <header id="header">
         <div class="inner">
-            <a href="index.html" class="logo">Theory</a>
+            <a href="/listaCadeiras" class="logo">Vídeo Aulas</a>
             <nav id="nav">
                 <a href="/listaCadeiras">Cadeiras</a>
                 <a href="">Logout</a>
