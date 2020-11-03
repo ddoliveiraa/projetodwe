@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Cadeiras;
 use App\Models\videoaula;
 use App\Models\User;
+use App\Models\User_Cadeira;
 
 class CadeirasController extends Controller
 {
@@ -27,8 +28,11 @@ class CadeirasController extends Controller
 
         $videos = videoaula::where('id_cadeira', $id)->get();
         $cadeira = Cadeiras::where('id', $id)->get();
+        $admin = User_Cadeira::where([['user_id', "=" ,auth()->id()], ["cadeiras_id", "=", $id]])->get();
+        error_log($admin);
+        
 
-        return view('biblioteca', ['v'=>$videos, 'c'=>$cadeira]);
+        return view('biblioteca', ['v'=>$videos, 'c'=>$cadeira, 'a'=>$admin]);
     }
 
     

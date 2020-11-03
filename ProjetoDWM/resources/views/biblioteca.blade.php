@@ -30,10 +30,12 @@
                 @endforeach
 
                 {{-- Botão upload --}}
-
+                @if($a[0]->isAdmin)
                 <article class="comment-box custom-button" id="myBtn">
                     <div id="add-button">+</div>
                 </article>
+                @endif
+                
 
             </div>
         </div>

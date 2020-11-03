@@ -16,7 +16,7 @@ class ComentariosController extends Controller
         
         $user = new comentarios();
 
-        $user->nome = auth()->name();
+        $user->nome = auth()->user()->name;
         $user->comentario = $request->message;
         $user->id_video = $request->vid_id;
         $user->save();
