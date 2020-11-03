@@ -54,7 +54,7 @@
             </form>
 
             <header class="align-center">
-                <h2>Comentários</h2>
+                <h2 style="margin-top: 40px">Comentários</h2>
             </header>
             <div>
                 @foreach($coms as $c)
@@ -66,10 +66,6 @@
                 </article>
                 @endforeach
             </div>
-
-
-
-
 
         </div>
 
