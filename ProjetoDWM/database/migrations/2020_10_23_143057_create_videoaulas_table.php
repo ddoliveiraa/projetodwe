@@ -15,11 +15,9 @@ class CreateVideoaulasTable extends Migration
     {
         Schema::create('videoaulas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->bigInteger('id_disciplina');
             $table->String('nome');
             $table->String('descricao');
             $table->String('url');
-            $table->foreignId('id_cadeira');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });

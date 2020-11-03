@@ -18,6 +18,10 @@ class CreateCadeirasTable extends Migration
             $table->String('nome');
             $table->timestamps();
         });
+
+        Schema::table('videoaulas', function (Blueprint $table){
+            $table->foreignId('id_cadeira')->references('id')->on('cadeiras')->onDelete('cascade');
+        });
     }
 
     /**
