@@ -26,24 +26,6 @@ class VideoaulaController extends Controller
         return view('register');
      }
 
-     public function store(Request $request) {
-
-
-        $request->validate([
-            'nome' => 'required',
-            'comentario' => 'required'
-        ]);
-
-        $user = new Participants();
-
-        $user->nome = $request->name;
-        $user->nick = $request->nick;
-        $user->save();
-
-        return redirect('/');
-
-     }
-
      public function show($id) {
         $video = videoaula::find($id);
         $comentarios = comentarios::where('id_video', $id)->get();
@@ -75,4 +57,24 @@ class VideoaulaController extends Controller
         echo 'destroy';
      }
 
+     public function store(Request $request) {
+
+        $request->validate([
+            'title' => 'required',
+            'descricao' => 'required',
+            'url' => 'required'
+        ]);
+        
+        $video = new videoaula();
+
+        $video->nome = $request->title;
+        $video->descricao = $request->descricao;
+        $video->url = $request->url;
+        $video->id_cadeira = $request->id_v;
+        $video->save();
+
+        //return redirect('/video_aula/'.$request->vid_id);
+        return back();
+
+     }
 }

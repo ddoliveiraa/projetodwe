@@ -13,6 +13,6 @@ class videoaula extends Model
         'nome',
         'descricao',
         'url',
-        'id',
+        'id_cadeira',
     ];
 }

@@ -17,8 +17,8 @@ class CadeirasController extends Controller
     public function index() {
 
         $cadeiras = Cadeiras::all();
-        $user = auth()-> name();
-        return view('listaCadeiras', ['c'=>$cadeiras, 'u'=>$user]);
+        //$user = auth()-> name();
+        return view('listaCadeiras', ['c'=>$cadeiras]);
     }
 
     public function show($id){
@@ -29,13 +29,5 @@ class CadeirasController extends Controller
         return view('biblioteca', ['v'=>$videos, 'c'=>$cadeira]);
     }
 
-    protected function create(array $data)
-    {
-        return videoaula::create([
-            'nome' => $data['nome'],
-            'descricao' => $data['descricao'],
-            'url' => $data['url'],
-            'id' => $data['id'],
-        ]);
-    }
+    
 }
