@@ -15,7 +15,7 @@ class CreateComentariosTable extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_video');
+            $table->foreignId('id_video')->references('id')->on('videoaulas')->onDelete('cascade');
             $table->String('nome');
             $table->String('comentario');
             $table->timestamp('created_at');

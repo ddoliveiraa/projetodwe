@@ -40,4 +40,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function disciplinas(){
+
+        return $this->morphedByMany('App\Models\Cadeiras', 'user__cadeira');
+
+    }
 }
