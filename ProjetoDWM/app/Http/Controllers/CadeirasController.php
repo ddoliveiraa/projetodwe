@@ -17,8 +17,8 @@ class CadeirasController extends Controller
     public function index() {
 
         $cadeiras = Cadeiras::all();
-
-        return view('listaCadeiras', ['c'=>$cadeiras]);
+        $user = auth()-> name();
+        return view('listaCadeiras', ['c'=>$cadeiras, 'u'=>$user]);
     }
 
     public function show($id){

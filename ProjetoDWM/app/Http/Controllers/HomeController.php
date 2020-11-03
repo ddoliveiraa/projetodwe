@@ -23,7 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home'); //mudar aqui a home page
+        return view('home');
+       // return redirect('/listaCadeiras'); //mudar aqui a home page
         // listaCadeiras
     }
 }
