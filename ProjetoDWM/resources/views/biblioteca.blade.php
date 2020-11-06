@@ -51,7 +51,11 @@
                 @csrf
                 <input type="text" name="title" id="title" placeholder="Insira um título...">
                 <textarea name="descricao" id="" cols="10" rows="10" placeholder="Escreva uma descrição..."></textarea>
+<<<<<<< HEAD
                 <input type="file" accept="video/*" name="file" id="file">
+=======
+                <input type="file" name="url" id="url" placeholder="Insira o URL do vídeo">
+>>>>>>> 08944914bb3dbe86a68051807cf5b69c50fc3c2c
                 <input style="display: none" type="text" name="id_v" id="id_v" value={{$c[0]->id}}>
                 <input type="submit" value="Submeter" class="button special">
                 <input type="reset" value="Apagar">

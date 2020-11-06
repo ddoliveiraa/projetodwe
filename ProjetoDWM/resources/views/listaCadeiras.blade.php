@@ -14,13 +14,15 @@
 
             <div class="flex flex-4">
 
-                @foreach ($c as $cadeira)
+                @if (isset($c))
+                    @foreach ($c as $cadeira)
 
                     <div onclick="window.location='/listaCadeiras/{{$cadeira->id}}';" class="box person custom-button">
                     <a><h3>{{ $cadeira->nome }}</h3></a>
                     </div>
 
-                @endforeach
+                    @endforeach
+                @endif
 
             </div>
         </div>
