@@ -59,22 +59,30 @@ class VideoaulaController extends Controller
 
      public function store(Request $request) {
 
-        $request->validate([
-            'title' => 'required',
-            'descricao' => 'required',
-            'url' => 'required'
-        ]);
-        
-        $video = new videoaula();
+         $request->validate([
+               'title' => 'required',
+               'descricao' => 'required',
+               'file' => 'required'
+         ]);
+         
+         $video = new videoaula();
 
-        $video->nome = $request->title;
-        $video->descricao = $request->descricao;
-        $video->url = $request->url;
-        $video->id_cadeira = $request->id_v;
-        $video->save();
+         $video->nome = $request->title;
+         $video->descricao = $request->descricao;
+         $video->id_cadeira = $request->id_v;
 
-        //return redirect('/video_aula/'.$request->vid_id);
-        return back();
+         $fileName = time().'_'.$request->file->getClientOriginalName();
+         error_log("File\n".$request->file('file'));
+         $filePath = '/storage/'.$request->file('file')->storeAs('videos', $fileName, 'public');
+         
+         
+
+         $video->url = $filePath;
+
+         $video->save();
+
+         //return redirect('/video_aula/'.$request->vid_id);
+         return back();
 
      }
 }

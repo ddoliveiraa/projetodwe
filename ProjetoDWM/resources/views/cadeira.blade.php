@@ -14,7 +14,7 @@
                 <h2>{{$video->nome}}</h2>
             </header>
             <div class="wrapper">
-                <video src="{{$video->url}}" width="960px" height="540px" controls>
+                <video src="{{$video->url}}" width="960px" height="540px" controls autoplay>
 
                 </video>
             </div>

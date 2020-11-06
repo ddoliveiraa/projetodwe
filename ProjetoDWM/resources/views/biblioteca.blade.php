@@ -47,11 +47,11 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form method="post" action="/video_aula">
+            <form method="post" action="/video_aula" enctype="multipart/form-data">
                 @csrf
                 <input type="text" name="title" id="title" placeholder="Insira um título...">
                 <textarea name="descricao" id="" cols="10" rows="10" placeholder="Escreva uma descrição..."></textarea>
-                <input type="text" name="url" id="url" placeholder="Insira o URL do vídeo">
+                <input type="file" accept="video/*" name="file" id="file">
                 <input style="display: none" type="text" name="id_v" id="id_v" value={{$c[0]->id}}>
                 <input type="submit" value="Submeter" class="button special">
                 <input type="reset" value="Apagar">
