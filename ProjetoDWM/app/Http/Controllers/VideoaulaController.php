@@ -22,10 +22,6 @@ class VideoaulaController extends Controller
         return view('biblioteca', ['videos'=>$videos]);
      }
 
-     public function create() {
-        return view('register');
-     }
-
      public function show($id) {
         $video = videoaula::find($id);
         $comentarios = comentarios::where('id_video', $id)->get();
@@ -34,33 +30,10 @@ class VideoaulaController extends Controller
         return view('cadeira', ['video'=>$video , 'coms'=>$comentarios, 'c'=>$cadeira]);
      }
 
-     public function edit($id) {
-
-        $user = Participants::find($id);
-
-        return view('edit', compact('user'));
-     }
-
-     public function update(Request $request, $id_video) {
-
-        $user = comentarios::all()->where("id_video" , $id_video); //SELECT * From tabel where
-
-        $user->nome = $request->name;
-        $user->nick = $request->nick;
-        $user->save();
-
-        return redirect('/');
-
-     }
-
-     public function destroy($id) {
-        echo 'destroy';
-     }
-
      public function store(Request $request) {
 
          $request->validate([
-               'title' => 'required',
+          'title' => 'required',
                'descricao' => 'required',
                'file' => 'required'
          ]);
